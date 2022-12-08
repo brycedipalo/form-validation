@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bellissimo Form Validation</title>
+    <!-- Favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
+    <!--/favicon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sign Up Today!</h1>
+        <form id="form" >
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Full Name"
+                    required minlength="3" maxlength="100" name="name">
+            </div> 
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" placeholder="555-555-5555"
+                required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="phone">
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email " placeholder="email@address.com"
+                required name="email" >
+            </div>
+            <div class="form-group">
+                <label for="website">Website URL</label>
+                <input type="url" id="website" placeholder="https://www.yourWebsite.com"
+                required name="website">
+            </div>
+            <div class="form-group">
+                <label for="password1">Password</label>
+                <input type="password" id="password1" placeholder="Create Password (Min. 8 Characters)"
+                required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
+                title="Please include at least one uppercase and one number">
+            </div>
+            <div class="form-group">
+                <label for="password2">Conform Password</label>
+                <input type="password" id="password2" placeholder="Confirm Password"
+                required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
+                title="Please include at least one uppercase and one number" 
+                name="password">
+            </div>
+            <button type="submit" >Register</button>
+        </form>
+        <div class="message-container">
+            <h3 id="message">Don't Hesitate!</h3>
+        </div>
+    </div>
+    <!--Script-->
+    <script src="script.js"></script>
+  
+</body>
+</html>
